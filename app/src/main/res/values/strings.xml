@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Posture Check</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="add_minute">Add minute</string>
+    <string name="subtract_minute">Subtract minute</string>
+    <string name="clock">%s:%s</string>
+    <string name="darken_screen">Darken screen</string>
+</resources>

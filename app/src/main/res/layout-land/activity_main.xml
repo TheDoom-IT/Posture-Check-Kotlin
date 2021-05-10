@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageButton
+        android:id="@+id/button_plus"
+        style="@style/button_round"
+        android:contentDescription="@string/add_minute"
+        android:visibility="visible"
+        android:layout_marginEnd="@dimen/normal_margin"
+        android:layout_marginBottom="@dimen/normal_margin"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/clock"
+        app:srcCompat="@drawable/plus_sign" />
+
+    <TextView
+        android:id="@+id/clock"
+        style="@style/counterText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/normal_margin"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="00:00" />
+
+    <ImageButton
+        android:id="@+id/button_minus"
+        style="@style/button_round"
+        android:contentDescription="@string/subtract_minute"
+        android:layout_marginStart="@dimen/normal_margin"
+        android:layout_marginBottom="@dimen/normal_margin"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/clock"
+        app:srcCompat="@drawable/minus_sign" />
+
+
+    <Button
+        style="@style/button_rectangular"
+        android:id="@+id/button_start_stop"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/start"
+        android:layout_marginTop="@dimen/small_margin"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/clock" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/darken_screen"
+        style="@style/normalText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:textAppearance="@style/normalText"
+        android:text="@string/darken_screen"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_start_stop" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
